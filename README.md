@@ -1,16 +1,16 @@
-# KopihaoDrawerTksm 
+# KopihaoDrawerTksm
 
 _Nothing reinvent, merely utilize [Tang Ke's slide menu](https://github.com/TangKe/SlideMenu) ._
- 
+
 ## Platform
 - Android
 
 ## Why use this
 1. Tang Ke's slide menu (*hereinafter tksm*) is awesome
 2. Souce code of tksm is included in this project
-3. Lazier (*might not simpler, idk*) way to use slide menu 
+3. Lazier (*might not simpler, idk*) way to use slide menu
 4. No need to understand tksm source code deeply
-  
+
 	_However, understand how to use tksm will help u to customize tksm at full potential_
 
 
@@ -19,18 +19,18 @@ _Nothing reinvent, merely utilize [Tang Ke's slide menu](https://github.com/Tang
 * Competitive as jfeinstein10 SlidingMenu
 * Left and right menu supported
 * Left and right menu underlying below main view
-  
+
 ## How it behave
-1. Exactly as tksm. 
+1. Exactly as tksm.
 
-## How to use  
-_Everything based on demo provided._ <br> 
+## How to use
+_Everything based on demo provided._ <br>
 
->#### Steps : 
+>#### Steps :
 > 1. Copy src/everything under **com.view.plugin.tksm**
 > 2. Copy res/values/tk_sm_attrs.xml
 > 2. Define layout, explain later
-> 3. Some code to be overwritten in your Activity, also..later... 
+> 3. Some code to be overwritten in your Activity, also..later...
 
 ---
 
@@ -40,15 +40,15 @@ _Left menu(*hereinafter LSM*) and Right menu(*hereinafter RSM*)_<br>
 > ##### 3 layout to be defined in res/layout:
 > 1. tksm - lay_slidemenu_tangke
 > 2. left menu - lay_app_lsm
-> 3. right menu -lay_app_rsm 
+> 3. right menu -lay_app_rsm
 > 4. main view - lay_app_template
 
 > ##### Illustration:<br>
 >|LSM|Main_View|RSM|<br>
- 
+
  ---
- 
-In your Main_View : 
+
+In your Main_View :
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -60,7 +60,7 @@ In your Main_View :
 ```
 **layout_role="content"** is compulsory.
 
-In your LSM : 
+In your LSM :
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -73,9 +73,9 @@ In your LSM :
     android:background="@android:color/holo_orange_dark" >
 ```
 **layout_role="primaryMenu"** is compulsory.<br>
- 
 
-In your RSM : 
+
+In your RSM :
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -89,10 +89,10 @@ In your RSM :
 ```
 **layout_role="secondaryMenu"** is compulsory.
 
---- 
+---
 
 In your Activity class:
- 
+
 ```java
 public void setContentView(int pLayid) {
 		super.setContentView(R.layout.lay_slidemenu_tangke);
@@ -118,8 +118,8 @@ public void setContentView(int pLayid) {
 			inflateUI(vAppContent, pLayid);
 		}
 		mgrTKSM.close();
-}  
-```   
+}
+```
 
 What you do in code snippet above:
 * tell TKSlideMenuManager your layouts _(LSM, RSM, MainView)_
@@ -137,21 +137,21 @@ What TKSlideMenuManager do:
 
 ## How to customize
 
-### LAYOUT 
+### LAYOUT
 
 Left menu(*hereinafter LSM*) and Right menu(*hereinafter RSM*) is designed as view group type, FrameLayout.
 
-You may customize lsm (*lay_app_lsm in demo app*) and<br> 
-rsm (*lay_app_rsm in demo app*) according to your project requirement, 
-by 
-> **changing layout** (as ListView, GridView, etc)  
-> 
-> _OR_ 
-> 
+You may customize lsm (*lay_app_lsm in demo app*) and<br>
+rsm (*lay_app_rsm in demo app*) according to your project requirement,
+by
+> **changing layout** (as ListView, GridView, etc)
+>
+> _OR_
+>
 > **inflate custom layout/fragment** into it.
-  
-<br><br> 
-  
+
+<br><br>
+
 ### TKSlideMenuConfig
 
 It attempts to initialize tksm.
@@ -162,7 +162,7 @@ It attempts to initialize tksm.
 	private boolean slideContent = true;
 	private int slideSensitivity = 0;
 	private int shadowLeft = 8;
-	private int shadowRight = 8; 
+	private int shadowRight = 8;
 ```
 |Attribute|Value|
 |:---|:---|
@@ -181,18 +181,18 @@ You can initialize more tksm attributes via this and enhance method in TKSlideMe
 ```
 
 ## Things to take note
-- This project is build on latest version of tksm (last check 30/09/2015) 
+- This project is build on latest version of tksm (last check 30/09/2015)
 - Might not be maintained if tksm is updated by its author.
-- Well, text me if you feel upgrade is needed, I will update when I'm free. 
- 
-## Dependancy 
-_No string attached. Download and deploy._  
- 
-## License  
+- Well, text me if you feel upgrade is needed, I will update when I'm free.
+
+## Dependancy
+_No string attached. Download and deploy._
+
+## License
 
 ```
 Copyright (C) 2015 Kopihao
- 
+
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -205,7 +205,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
 
 
 

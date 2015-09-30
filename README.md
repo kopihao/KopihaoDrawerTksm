@@ -1,7 +1,6 @@
 # KopihaoDrawerTksm 
 
-_Nothing reinvent, merely utilize Tang Ke's slide menu._
-https://github.com/TangKe/SlideMenu
+_Nothing reinvent, merely utilize [Tang Ke's slide menu](https://github.com/TangKe/SlideMenu) ._
  
 ## Platform
 - Android

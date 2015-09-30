@@ -128,6 +128,7 @@ What you do in code snippet above:
 * show MainView
 
 What TKSlideMenuManager do:
+
 |Action|How to|
 |:---|:---|
 |Open LSM | mgrTKSM.openLeft()|

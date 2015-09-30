@@ -126,18 +126,15 @@ public class TKScrollDetectors {
 		public boolean canScrollHorizontal(View v, int direction) {
 			try {
 				// Because this method is protected
-				Method computeHorizontalScrollOffsetMethod = WebView.class
-						.getDeclaredMethod("computeHorizontalScrollOffset");
-				Method computeHorizontalScrollRangeMethod = WebView.class
-						.getDeclaredMethod("computeHorizontalScrollRange");
+				Method computeHorizontalScrollOffsetMethod = WebView.class.getDeclaredMethod("computeHorizontalScrollOffset");
+				Method computeHorizontalScrollRangeMethod = WebView.class.getDeclaredMethod("computeHorizontalScrollRange");
 				computeHorizontalScrollOffsetMethod.setAccessible(true);
 				computeHorizontalScrollRangeMethod.setAccessible(true);
 
 				final int horizontalScrollOffset = (Integer) computeHorizontalScrollOffsetMethod.invoke(v);
 				final int horizontalScrollRange = (Integer) computeHorizontalScrollRangeMethod.invoke(v);
 
-				return (direction > 0 && v.getScrollX() > 0)
-						|| (direction < 0 && horizontalScrollOffset < horizontalScrollRange - v.getWidth());
+				return (direction > 0 && v.getScrollX() > 0) || (direction < 0 && horizontalScrollOffset < horizontalScrollRange - v.getWidth());
 			} catch (NoSuchMethodException e) {
 				e.printStackTrace();
 			} catch (IllegalArgumentException e) {
@@ -176,9 +173,7 @@ public class TKScrollDetectors {
 			if (0 == horizontalScrollView.getChildCount()) {
 				return false;
 			}
-			return (direction < 0
-					&& scrollX < horizontalScrollView.getChildAt(0).getWidth() - horizontalScrollView.getWidth())
-					|| (direction > 0 && scrollX > 0);
+			return (direction < 0 && scrollX < horizontalScrollView.getChildAt(0).getWidth() - horizontalScrollView.getWidth()) || (direction > 0 && scrollX > 0);
 		}
 
 		@Override
@@ -224,8 +219,7 @@ public class TKScrollDetectors {
 
 	public interface ScrollDetectorFactory {
 		/**
-		 * Create new instance of {@link ScrollDetector} based on the parameter
-		 * v
+		 * Create new instance of {@link ScrollDetector} based on the parameter v
 		 *
 		 * @param v
 		 * @return

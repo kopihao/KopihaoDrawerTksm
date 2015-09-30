@@ -2,6 +2,8 @@
 
     <style name="AppBaseTheme" parent="android:Theme.Light" />
 
-    <style name="AppTheme" parent="AppBaseTheme" />
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
 
 </resources>

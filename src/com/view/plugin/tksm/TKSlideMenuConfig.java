@@ -11,7 +11,7 @@ public class TKSlideMenuConfig {
 	private boolean lockLeft = false;
 	private boolean lockRight = false;
 	private boolean slideContent = true;
-	private int slideSensitivity = 0;
+	private int slideSensitivity = 30;
 	private int shadowLeft = 8;
 	private int shadowRight = 8;
 

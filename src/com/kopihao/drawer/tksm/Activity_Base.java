@@ -62,7 +62,7 @@ public abstract class Activity_Base extends FragmentActivity {
 			}
 			inflateUI(vAppContent, pLayid);
 		}
-		mgrTKSM.close();
+		mgrTKSM.openMain();
 
 	}
 

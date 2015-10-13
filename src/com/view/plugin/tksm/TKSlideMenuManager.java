@@ -49,7 +49,7 @@ public class TKSlideMenuManager {
 		curSM.open(false, true);
 	}
 
-	public void close() {
+	public void openMain() {
 		if (null == curSM) {
 			return;
 		}

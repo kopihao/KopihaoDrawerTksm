@@ -6,7 +6,8 @@ import android.os.Bundle;
  * This project demo drawer designed by Tang Ke <br>
  * And present a lazy(may not simpler, idk) way to use his library. <br>
  * Credit to
- * <a href="https://github.com/TangKe/SlideMenu"> https://github.com/TangKe/SlideMenu </a> <br>
+ * <a href="https://github.com/TangKe/SlideMenu"> https://github.com/TangKe/
+ * SlideMenu </a> <br>
  * <br>
  *
  * Left menu(hereinafter LSM) and Right menu(hereinafter RSM) <br>

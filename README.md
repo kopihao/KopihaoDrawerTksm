@@ -133,7 +133,7 @@ What TKSlideMenuManager do:
 |:---|:---|
 |Open LSM | mgrTKSM.openLeft()|
 |Open RSM | mgrTKSM.openRight()|
-|Show Mainview | mgrTKSM.close()|
+|Show Mainview | mgrTKSM.openMain()|
 
 
 ## How to customize
